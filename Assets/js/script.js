@@ -3,9 +3,10 @@
 // To demonstrate that my understanding of jQuery, 
 // I will create a line of code for each section using jQuery
 
+
+// Create the elements for each text area for each time
 // jQuery: 
-// var currentDay = $("currentDay")
-// currentDay.text(timeOfDay)
+// var T800 = $("#T800")
 var T800 = document.querySelector("#T800");
 var T900 = document.querySelector("#T900");
 var T1000 = document.querySelector("#T1000");
@@ -22,6 +23,7 @@ var T2000 = document.querySelector("#T2000");
 var T2100 = document.querySelector("#T2100");
 var T2200 = document.querySelector("#T2200");
 
+// Set each time, text area and button to an object to organize and associate each element to the timeslot
 var timeInfo = [{
         time: 8,
         textId:"T800",
@@ -100,30 +102,38 @@ var timeInfo = [{
     }
 ]
 
+// Use moment to get the current time of the day and return the day, month, year and time
 var timeOfDay = moment().format("ddd, MMMM Do YYY, h:mm:ss a");
 
-
-var currentDay = document.getElementById("currentDay")
-currentDay.innerText = timeOfDay
+// Associate the current time with the element that displays the time
 // jQuery: 
 // var currentDay = $("currentDay")
 // currentDay.text(timeOfDay)
+var currentDay = document.getElementById("currentDay")
+currentDay.innerText = timeOfDay
 
+// Use moment to get the current time of the day and return only the hour (0-23)
 var timeHour = moment().format("H")
 
+// run the initial functions
 init();
 
 function init(){
+    // if there are any elements in the local storage, load them
     loadLocalStorage()
+    // check the time associated with the element to the current time and change the classes to display the correct text area color
     timeCheck();
 };
 
 function loadLocalStorage(){
     for(var y=0; y < timeInfo.length; y++){
+        // 1) look for the the value "timeInfo[y].textId" or "T800" in the local storage
+        // 2) then assign the local storage information to the "queryselected element"
         timeInfo[y].text.value = localStorage.getItem(`${timeInfo[y].textId}`)
     }
 }
 
+// Use compare the time slot hours "timeInfo[i].time" to the current time hour and assign the correct class/background color
 // jQuery: timeInfo[i].text.addClass("past")
 function timeCheck(){
     for(var i=0; i < timeInfo.length; i++){
@@ -137,6 +147,8 @@ function timeCheck(){
     }
 }
 
+// create an event listener for each timebutton
+// when the button is clicked, store the contents in the text area to the local storage with the name "T800"
 document.querySelector(timeInfo[0].button).addEventListener("click",function(event){
     event.preventDefault();
     lsVar = timeInfo[0].textId;

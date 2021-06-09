@@ -1,5 +1,44 @@
 # 05 Third-Party APIs: Work Day Scheduler
 
+# The Task
+
+The task for this homework was to create a calender application that allows the user to save events every hour to the local storage. When the page is reloaded, the events are supposed to be displayed to the correct timeslot text area. The text area for each timeslot should also change color based on the current time: past = white, current = red, and future = green.
+
+For this project, I created 14 timeslots that display the timeslot time, display a text area to enter event information, and a submit button that changes as the user hover overs the area. The JavaScript associates the timeslot with all of its elements. As a result, this negatively affected how I was able to use jQuery. I ended up writing the JavaScript in standard JavaScript and making notes about what the jQuery would be if it were written in jQuery. Moment.js was used to get the current time which was used in the 
+
+## Acceptance Criteria
+
+```
+GIVEN I am using a daily planner to create a schedule
+  WHEN I open the planner
+    THEN the current day is displayed at the top of the calendar
+  WHEN I scroll down
+    THEN I am presented with timeblocks for standard business hours
+  WHEN I view the timeblocks for that day
+    THEN each timeblock is color coded to indicate whether it is in the past, present, or future
+  WHEN I click into a timeblock
+    THEN I can enter an event
+  WHEN I click the save button for that timeblock
+    THEN the text for that event is saved in local storage
+  WHEN I refresh the page
+    THEN the saved events persist
+```
+
+Once the changes to the code were implemented, everything needed to be uploaded to a Github Repository
+
+    * Repository contains: 
+    *       quality README file with description, 
+    *       screenshot, and 
+    *       link to deployed application.
+
+![WebsiteDisplay](./Assets/img/Website.PNG)
+
+Website: https://d-loot.github.io/W05-WorkDayScheduler/
+
+Github: https://github.com/D-Loot/W05-WorkDayScheduler
+
+# Background Information
+
 ## Your Task
 
 Create a simple calendar application that allows a user to save events for each hour of the day by modifying starter code. This app will run in the browser and feature dynamically updated HTML and CSS powered by jQuery.
