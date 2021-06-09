@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+      integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
+      crossorigin="anonymous"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      type="text/javascript"
+      src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.27.0/moment.min.js"
+    ></script>
+
+    <link rel="stylesheet" href="./Assets/css/style.css" />
+    <title>Work Day Scheduler</title>
+  </head>
+
+  <body>
+    <header class="jumbotron">
+      <h1 class="display-3">Work Day Scheduler</h1>
+      <p class="lead">A simple calendar app for scheduling your work day</p>
+      <p id="currentDay" class="lead"></p>
+    </header>
+    <div class="container">
+      <!-- Timeblocks go here
+      use grid to lay out the time blocks 
+      https://getbootstrap.com/docs/4.6/layout/grid/#grid-options-->
+      <div class="timeBlock">
+        <div class="row border-top">
+          <p class="=time col-2 border-top text-right">8:00 am</p>
+          <form method="POST" class="col-9">
+            <textarea name="T800" id="T800" class="w-100" rows="2"></textarea>
+          </form>
+          <img src="./Assets/img/Save2.png" onmouseover="this.src='./Assets/img/Save1.png'" onmouseout="this.src='./Assets/img/Save2.png'" alt="SaveImage1" class="col-1 TB800 saveBtn">
+        </div>
+      </div>
+
+        <div class="timeBlock">
+          <div class="row border-top">
+            <p class="=time col-2 border-top text-right">9:00 am</p>
+            <form method="POST" class="col-9">
+              <textarea name="T900" id="T900" class="w-100" rows="2"></textarea>
+            </form>
+            <img src="./Assets/img/Save2.png" onmouseover="this.src='./Assets/img/Save1.png'" onmouseout="this.src='./Assets/img/Save2.png'" alt="SaveImage1" class="col-1 TB900 saveBtn">
+          </div>
+        </div>
+
+          <div class="timeBlock">
+            <div class="row border-top">
+              <p class="=time col-2 border-top text-right">10:00 am</p>
+              <form method="POST" class="col-9">
+                <textarea name="T1000" id="T1000" class="w-100" rows="2"></textarea>
+              </form>
+              <img src="./Assets/img/Save2.png" onmouseover="this.src='./Assets/img/Save1.png'" onmouseout="this.src='./Assets/img/Save2.png'" alt="SaveImage1" class="col-1 TB1000 saveBtn">
+            </div>
+          </div>
+
+        <div class="timeBlock">
+          <div class="row border-top">
+            <p class="=time col-2 border-top text-right">11:00 am</p>
+            <form method="POST" class="col-9">
+              <textarea name="T1100" id="T1100" class="w-100" rows="2"></textarea>
+            </form>
+            <img src="./Assets/img/Save2.png" onmouseover="this.src='./Assets/img/Save1.png'" onmouseout="this.src='./Assets/img/Save2.png'" alt="SaveImage1" class="col-1 TB1100 saveBtn">
+          </div>
+        </div>
+
+        <div class="timeBlock">
+          <div class="row border-top">
+            <p class="=time col-2 border-top text-right">12:00 pm</p>
+            <form method="POST" class="col-9">
+              <textarea name="T1200" id="T1200" class="w-100" rows="2"></textarea>
+            </form>
+            <img src="./Assets/img/Save2.png" onmouseover="this.src='./Assets/img/Save1.png'" onmouseout="this.src='./Assets/img/Save2.png'" alt="SaveImage1" class="col-1 TB1200 saveBtn">
+          </div>
+        </div>
+
+        <div class="timeBlock">
+          <div class="row border-top">
+            <p class="=time col-2 border-top text-right">1:00 pm</p>
+            <form method="POST" class="col-9">
+              <textarea name="T1300" id="T1300" class="w-100" rows="2"></textarea>
+            </form>
+            <img src="./Assets/img/Save2.png" onmouseover="this.src='./Assets/img/Save1.png'" onmouseout="this.src='./Assets/img/Save2.png'" alt="SaveImage1" class="col-1 TB1300 saveBtn">
+          </div>
+        </div>
+
+        <div class="timeBlock">
+          <div class="row border-top">
+            <p class="=time col-2 border-top text-right">2:00 pm</p>
+            <form method="POST" class="col-9">
+              <textarea name="T1400" id="T1400" class="w-100" rows="2"></textarea>
+            </form>
+            <img src="./Assets/img/Save2.png" onmouseover="this.src='./Assets/img/Save1.png'" onmouseout="this.src='./Assets/img/Save2.png'" alt="SaveImage1" class="col-1 TB1400 saveBtn">
+          </div>
+        </div>
+
+        <div class="timeBlock">
+          <div class="row border-top">
+            <p class="=time col-2 border-top text-right">3:00 pm</p>
+            <form method="POST" class="col-9">
+              <textarea name="T1500" id="T1500" class="w-100" rows="2"></textarea>
+            </form>
+            <img src="./Assets/img/Save2.png" onmouseover="this.src='./Assets/img/Save1.png'" onmouseout="this.src='./Assets/img/Save2.png'" alt="SaveImage1" class="col-1 TB1500 saveBtn">
+          </div>
+        </div>
+
+        <div class="timeBlock">
+          <div class="row border-top">
+            <p class="=time col-2 border-top text-right">4:00 pm</p>
+            <form method="POST" class="col-9">
+              <textarea name="T1600" id="T1600" class="w-100" rows="2"></textarea>
+            </form>
+            <img src="./Assets/img/Save2.png" onmouseover="this.src='./Assets/img/Save1.png'" onmouseout="this.src='./Assets/img/Save2.png'" alt="SaveImage1" class="col-1 TB1600 saveBtn">
+          </div>
+        </div>
+
+        <div class="timeBlock">
+          <div class="row border-top">
+            <p class="=time col-2 border-top text-right">5:00 pm</p>
+            <form method="POST" class="col-9">
+              <textarea name="T1700" id="T1700" class="w-100" rows="2"></textarea>
+            </form>
+            <img src="./Assets/img/Save2.png" onmouseover="this.src='./Assets/img/Save1.png'" onmouseout="this.src='./Assets/img/Save2.png'" alt="SaveImage1" class="col-1 TB1700 saveBtn">
+          </div>
+        </div>
+
+        <div class="timeBlock">
+          <div class="row border-top">
+            <p class="=time col-2 border-top text-right">6:00 pm</p>
+            <form method="POST" class="col-9">
+              <textarea name="T1800" id="T1800" class="w-100" rows="2"></textarea>
+            </form>
+            <img src="./Assets/img/Save2.png" onmouseover="this.src='./Assets/img/Save1.png'" onmouseout="this.src='./Assets/img/Save2.png'" alt="SaveImage1" class="col-1 TB1800 saveBtn">
+          </div>
+        </div>
+
+        <div class="timeBlock">
+          <div class="row border-top">
+            <p class="=time col-2 border-top text-right">7:00 pm</p>
+            <form method="POST" class="col-9">
+              <textarea name="T1900" id="T1900" class="w-100" rows="2"></textarea>
+            </form>
+            <img src="./Assets/img/Save2.png" onmouseover="this.src='./Assets/img/Save1.png'" onmouseout="this.src='./Assets/img/Save2.png'" alt="SaveImage1" class="col-1 TB1900 saveBtn">
+          </div>
+        </div>
+
+        <div class="timeBlock">
+          <div class="row border-top">
+            <p class="=time col-2 border-top text-right">8:00 pm</p>
+            <form method="POST" class="col-9">
+              <textarea name="T2000" id="T2000" class="w-100" rows="2"></textarea>
+            </form>
+            <img src="./Assets/img/Save2.png" onmouseover="this.src='./Assets/img/Save1.png'" onmouseout="this.src='./Assets/img/Save2.png'" alt="SaveImage1" class="col-1 TB2000 saveBtn">
+          </div>
+        </div>
+
+        <div class="timeBlock">
+          <div class="row border-top">
+            <p class="=time col-2 border-top text-right">9:00 pm</p>
+            <form method="POST" class="col-9">
+              <textarea name="T2100" id="T2100" class="w-100" rows="2"></textarea>
+            </form>
+            <img src="./Assets/img/Save2.png" onmouseover="this.src='./Assets/img/Save1.png'" onmouseout="this.src='./Assets/img/Save2.png'" alt="SaveImage1" class="col-1 TB2100 saveBtn">
+          </div>
+        </div>
+
+        <div class="timeBlock">
+          <div class="row border-top">
+            <p class="=time col-2 border-top text-right">10:00 pm</p>
+            <form method="POST" class="col-9">
+              <textarea name="T2200" id="T2200" class="w-100" rows="2"></textarea>
+            </form>
+            <img src="./Assets/img/Save2.png" onmouseover="this.src='./Assets/img/Save1.png'" onmouseout="this.src='./Assets/img/Save2.png'" alt="SaveImage1" class="col-1 TB2200 saveBtn">
+          </div>
+        </div>
+    </div>
+
+
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> -->
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <!-- Apply jQuery UI <script> tag here -->
+      <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+    <script src="./Assets/js/script.js"></script>  
+  </body>
+</html>
